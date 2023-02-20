@@ -29,6 +29,6 @@ ascii따위 ord로 바꾸고, substr따위 mind로 바꿔 blind sqli를 시도 �
 
 admin계정의 비밀번호를 구해주면 된다.
 
-password=1c62ba6f
+password=0b70ea1f
 
 gg
