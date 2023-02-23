@@ -1,0 +1,18 @@
+<?php 
+  include "./config.php"; 
+  login_chk(); 
+  $db = dbconnect(); 
+  if(strlen($_GET[shit])>1) exit("No Hack ~_~"); 
+  if(preg_match('/ |\n|\r|\t/i', $_GET[shit])) exit("HeHe"); 
+  $query = "select 1234 from{$_GET[shit]}prob_giant where 1"; 
+  echo "<hr>query : <strong>{$query}</strong><hr><br>"; 
+  $result = @mysqli_fetch_array(mysqli_query($db,$query)); 
+  if($result[1234]) solve("giant"); 
+  highlight_file(__FILE__); 
+?>
+
+소스코드는 다음과 같다.
+shit에 공백문자를 집어넣어야 하는데,
+공백,\n,\r,\t 등등 대부분의 공백문자를 모두 필터링 당한다.
+%0b 또는 %0c등을 통해 공백 필터링을 우회할 수 있다.
+gg
